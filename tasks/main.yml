@@ -1,2 +1,14 @@
 ---
 # tasks file for ansible-role-systemd-resolved
+
+- name: Load OS specific vars
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_os_family }}.yml"
+    - "default.yml"
+
+- name: Install packages
+  package: name="{{ systemd_resolved_packages }}" state=present
+
+- name: Enable and start systemd-resolved
+  service: name=systemd-resolved enabled=yes state=started
