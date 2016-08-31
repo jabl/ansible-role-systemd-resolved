@@ -1,6 +1,10 @@
 ansible-role-systemd-resolved
 =============================
 
+**Note: Due to systemd-resolved 219 in EL 7.2 not resolving short
+  names, it is unusable for our present needs, and this project is on
+  hold for the time being.**
+
 Configures systemd-resolved, a caching DNS resolver.
 
 The approach generally is designed to be as minimally intrusive as
