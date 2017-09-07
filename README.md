@@ -22,7 +22,7 @@ Requirements
 
 This role does NOT configure nsswitch.conf, you must use something
 else for that,
-e.g. https://github.com/CSC-IT-Center-for-Science/ansible-nsswitch
+e.g. https://github.com/CSCfi/ansible-nsswitch
 
 Role Variables
 --------------
